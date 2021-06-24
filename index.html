@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/attend.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/page.css">
+    <link rel="stylesheet" href="./css/news.css">
+    <link rel="stylesheet" href="./css/game.css">
+    <script>
+        //设置根元素的字体大小
+        function setFont(){
+            let html=document.documentElement;
+            let designWidth=750;
+            html.style.fontSize=html.clientWidth/designWidth*100+'px';
+        }
+        setFont();
+        window.onresize=setFont;
+    </script>
+</head>
+
+<body>
+    
+   <div class="menu_container">
+       <div class="menu_title">
+           <div class="menu_logo">
+               <a>
+                   <img src="./assets/logo.png" alt="">
+               </a>
+           </div>
+           <div class="menu_switch"></div>
+           <div class="menu_attend">敬请关注</div>
+       </div>
+       <ul class="menu_nav">
+           <li onclick="showPage(0)">敬请关注</li>
+           <li onclick="showPage(1)">新闻资讯</li>
+           <li onclick="showPage(2)">游戏特色</li>
+           <li><a href=''>问题反馈</a></li>
+           <li>FAQ</li>
+       </ul>
+   </div>
+   <div class="page_container">
+        <div class="page">
+            <div class="attend_container">
+                <div class="attend_slogan">
+                    <span class="attend_play"  onclick="showPop('popVideo')">
+                    </span>
+                </div>
+                <div class="attend_button">
+                </div>
+            </div>
+            <div class="g_arrow"></div>
+            <div class="pop_container" id='popVideo'>
+                <div class="pop_inner">
+                    <video controls src="./assets/adv.mp4"></video>
+                    <div class="pop_close">x</div>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <div class="news_container" >
+                <div class="g_carousel-container" id='newsCarousel'>
+                     <ul class="g_carousel-list">
+                    </ul> 
+                    <ul class="g_carousel-indicator">
+                    </ul>
+                </div>
+                <div class="news_bar">
+                    <a href="" class="news_title selected">新闻</a>
+                    <a href="https://lolm.qq.com/m/news_list.html" class="news_title">
+                        更多
+                      </a>
+                </div>
+                <ul class="news_list">
+                </ul>
+            </div>
+        </div>
+       <div class="page">
+           <div class="game_container">
+                <div class="g_carousel-container" id='gameCarousel'>
+                    <ul class="g_carousel-list">
+                </ul> 
+                <ul class="g_carousel-indicator">
+                </ul>
+                <div class="g-carousel-prev"></div>
+                <div class="g-carousel-next"></div>
+            </div>
+            <div class="game_desc">
+                风靡全球的MOBA经典之作《英雄联盟》正版手游预约正式开启!
+            </div>
+            <div class="game_detail" onclick='showPop("popDetail")'> 
+            </div>
+            <div class="game_brand">
+                <div class="game_brand-item" onclick="showPop('popWeixin')"></div>
+                <div class="game_brand-item" onclick="showPop('popYxq')"></div>
+                <a href="//s.p.qq.com/pub/jump?d=AADzqr1P" target="_blank" class="game_brand-item"></a>
+                <a href="//weibo.com/u/7268748742" target="_blank" class="game_brand-item"></a>
+                <div class="game_brand-item" onclick="showPop('popZm')"></div>
+              </div>
+              <div class="game_footer">
+                <a href="" class="game_logo"></a>
+                <a href="" class="game_riot"></a>
+                <p>COPYRIGHT © 1998 - 2019 TENCENT.ALL RIGHTS RESERVED.</p>
+                <p>腾讯公司 版权所有</p>
+                <p>
+                  <a href="">粤网文[2017]6138-1456号</a>
+                  <span>|</span>
+                  <a href="">（总）网出证（粤）字第057号</a>
+                </p>
+              </div>
+           </div>
+       </div> 
+   </div>
+    <div class="pop_container" id='popDetail'>
+       <div class="pop_inner">
+            <div class="pop_top"></div>
+            <div class="pop_mid">
+                <div class="pop_content">
+                    <p>
+                        十年陪伴，无限热爱！风靡全球的MOBA经典之作——《英雄联盟》正版手游敬请关注！
+                        <br>
+                        真正的5V5公平竞技对战，传承端游纯正体验。人气英雄，经典还原；公平竞技，实力至上；峡谷传说，掌心再现。策略、战术、意识、配合，在移动端重现峡谷战场乐趣。
+                        <br>
+                        集结吧召唤师——欢迎来到英雄联盟，是时候展现真正的技术了！
+                    </p>
+                </div>
+            </div>
+            <div class="pop_bottom"></div>
+            <span class="pop_close">x</span>
+        </div>
+    </div> 
+    <div class="pop_container" id="popWeixin" >
+        <div class="pop_inner">
+          <div class="pop_top"></div>
+          <div class="pop_mid">
+            <div class="pop_content">
+              <img src="./assets/qrcode_wx.jpg" alt="">
+            </div>
+          </div>
+          <div class="pop_bottom"></div>
+          <span class="pop_close">x</span>
+        </div>
+      </div>
+      <div class="pop_container" id="popYxq" >
+        <div class="pop_inner">
+          <div class="pop_top"></div>
+          <div class="pop_mid">
+            <div class="pop_content">
+              <img src="./assets/qrcode_yxq.jpg" alt="">
+            </div>
+          </div>
+          <div class="pop_bottom"></div>
+          <span class="pop_close" >x</span>
+        </div>
+      </div>
+      <div class="pop_container" id="popZm">
+        <div class="pop_inner">
+          <div class="pop_top"></div>
+          <div class="pop_mid">
+            <div class="pop_content">
+              <img src="./assets/qrcode_zm.jpg" alt="">
+            </div>
+          </div>
+          <div class="pop_bottom"></div>
+          <span class="pop_close">x</span>
+        </div>
+      </div>
+   <script src='./js/common.js'></script>
+   <script src='./js/menu.js'></script>
+   <script src="./js/page.js"></script>
+   <script src="./js/news.js"></script>
+   <script src="./js/game.js"></script>
+</body>
+</html>
